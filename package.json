@@ -6,7 +6,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel --open",
-    "build": "parcel build"
+    "build": "parcel build",
+    "test": "jest"
   },
   "author": "Ardak Tileu",
   "license": "ISC",
