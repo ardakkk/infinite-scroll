@@ -1,6 +1,7 @@
 import { getItem, FeedItem } from "./utils/data.utils";
 import { db } from "./utils/db.utils";
 import { LazyListComponent } from "./lazy-list/lazy-list";
+import { ListComponent } from "./list/list";
 
 export const templateFn = (item: FeedItem) => {
   return `<section class="feed__item">
@@ -19,5 +20,9 @@ const feed = new LazyListComponent<FeedItem>(root, {
   templateFn,
   load: (start, limit) => DB.load(start, limit).then((cursor) => cursor.chunk),
   pageSize: 10
-})
+});
+// const feed = new ListComponent<FeedItem>(root, {
+//   templateFn,
+//   load: () => DB.load(0, 1000).then((cursor) => cursor.chunk),
+// });
 feed.render();
