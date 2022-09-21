@@ -1,0 +1,1 @@
+Learn more about Virtual List Pattern [here](https://www.patterns.dev/posts/virtual-lists/)
